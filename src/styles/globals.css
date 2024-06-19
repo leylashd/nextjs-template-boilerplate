@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  button {
+    @apply px-3 py-2 bg-indigo-500 text-white rounded-lg w-full block;
+  }
+
+  input {
+    @apply px-2 py-2 w-full border border-black rounded-md block;
+  }
+
+  h1 {
+    @apply text-2xl font-medium;
+  }
+}
