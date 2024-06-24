@@ -1,7 +1,12 @@
+import { Header } from "@/components/web/Header";
+
 export default function Page() {
   return (
-    <main>
-      <div>this is landing page</div>
-    </main>
+    <div>
+      <Header />
+      <main>
+        <div>this is landing page</div>
+      </main>
+    </div>
   );
 }

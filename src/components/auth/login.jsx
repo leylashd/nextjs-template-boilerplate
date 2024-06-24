@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export const Login = () => {
@@ -34,9 +35,9 @@ export const Login = () => {
 
   return (
     <main className="space-y-4">
-      <div className="text-center">
+      <div className="text-center space-y-1 pb-3">
         <h1>Login</h1>
-        <p>Fill this form to login</p>
+        <p className="text-gray-600">Please login to your account</p>
       </div>
       <input
         name="email"
@@ -45,10 +46,27 @@ export const Login = () => {
       />
       <input
         name="password"
+        type="password"
         placeholder="password"
         onChange={handleChangeInput}
       />
       <button onClick={handleLogin}>Login</button>
+      <div className="space-y-2 text-md text-gray-600">
+        <p>
+          Don&apos;t have an account?{" "}
+          <Link href="/register" className="text-blue-600">
+            {" "}
+            Sign up
+          </Link>
+        </p>
+        <p>
+          Back to{" "}
+          <Link href="/" className="text-blue-600">
+            {" "}
+            home
+          </Link>
+        </p>
+      </div>
     </main>
   );
 };

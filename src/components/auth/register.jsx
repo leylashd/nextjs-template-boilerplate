@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export const Register = () => {
   const [registerData, setRegisterData] = useState({
@@ -36,10 +37,10 @@ export const Register = () => {
   }
 
   return (
-    <main className="space-y-4">
-      <div className="text-center">
+    <main className="space-y-5">
+      <div className="text-center space-y-1 pb-3">
         <h1>Register</h1>
-        <p>Fill this form to create an account</p>
+        <p className="text-gray-600">Please fill this form to register</p>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <input
@@ -65,10 +66,27 @@ export const Register = () => {
       />
       <input
         name="password"
+        type="password"
         placeholder="password"
         onChange={handleChangeInput}
       />
       <button onClick={handleRegister}>Register</button>
+      <div className="space-y-2 text-md text-gray-600">
+        <p>
+          Already have an account?{" "}
+          <Link href="/login" className="text-blue-600">
+            {" "}
+            Sign in
+          </Link>
+        </p>
+        <p>
+          Back to{" "}
+          <Link href="/" className="text-blue-600">
+            {" "}
+            home
+          </Link>
+        </p>
+      </div>
     </main>
   );
 };

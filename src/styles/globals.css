@@ -4,7 +4,7 @@
 
 @layer base {
   button {
-    @apply px-3 py-2 bg-indigo-500 text-white rounded-lg w-full block;
+    @apply px-3 py-2 bg-indigo-500 text-white rounded-full w-full block;
   }
 
   input {
@@ -12,6 +12,12 @@
   }
 
   h1 {
-    @apply text-2xl font-medium;
+    @apply text-2xl font-bold;
+  }
+}
+
+@layer components {
+  .button-secondary {
+    @apply px-3 py-1 bg-black text-white rounded-full w-fit;
   }
 }
